@@ -37,18 +37,19 @@ function Login() {
     <> 
 <div class="login-page">
   <div class="form">  
-    <form class="login-form" onSubmit={handleSubmit(onSubmit)}>
+  <h1 className='text-center text-white'>User login</h1>
+    <form class="login-form mt-3" onSubmit={handleSubmit(onSubmit)}>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email address'
        {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}    
     />
-      {errors.Email && <p className='text-danger'>* Please check the email id.</p>}
+      {errors.Email && <p className='text-white'>* Please check the email id.</p>}
       <input type="password" className="form-control"  placeholder='password'
       {...register("password",
       {required: true})}                               
     /> 
-     {errors.password && <p className='text-danger'>* minimum one characters</p>}   
+     {errors.password && <p className='text-white'>* minimum one characters</p>}   
       <button type='submit'>login</button>
-      <p className='text-center  fs-6 mt-3'><Link to="/forgot-password">Forgot your password</Link></p>
+      <p className='text-center  fs-6 mt-3'><Link to="/forgot-password" className='text-white'>Forgot your password</Link></p>
     </form>
   </div>   
     <p className='text-center  fs-6  pmt'><Link to="/register">Don't  have a account, Create here Register</Link></p>  

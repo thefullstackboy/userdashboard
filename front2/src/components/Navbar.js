@@ -1,11 +1,39 @@
-import React from 'react'
+import './header.css'
+import {Link } from "react-router-dom";
+import MainContent from './MainContent';
+import Footer from './Footer';
 
-export default function Navbar() {
-  return (
-    <nav className="navbar sticky-top navbar-light bg-color border border-end border-secondary">
-    <div className="container-fluid">
-      <span className="navbar-brand mb-0 h1">aapkaCA</span>
-    </div>
-  </nav>
-  )
+function Navbar(props) {
+    return (<>
+        <div className='Header'>
+            <div>
+                <span className='Header-logo'>aapkCA</span>
+                <span className='Header-button right dropdown login-signup'>
+                    <button className="dropdown">Login / Signup</button>
+                    <div className="dropdown-content">                
+                   <Link to="/login">Customer</Link>                       
+                    </div>
+                </span>
+            </div>
+            <div className='Header-menu'>
+                <span className='Header-menu-item'>Home</span>
+                <span className='Header-menu-item'>About Us</span>
+                <span className='Header-menu-item'>CA Blogs</span>
+                <span className='Header-menu-item'>Trace CA Member</span>
+                <span className='Header-menu-item'>Need Help?</span>
+            </div>
+            <div className='Header-menu'>
+                <span className='Header-menu-item'>Search CA by location</span>
+                <span className='Header-menu-item'>Search CA by business need</span>
+                <span className='Header-menu-item'>Search CA by business stage</span>
+                <span className='Header-menu-item'>Search CA by business domain</span>
+            </div>
+        </div>
+        <MainContent/>
+        <Footer/>
+    </>
+    )
 }
+
+export default Navbar;
+

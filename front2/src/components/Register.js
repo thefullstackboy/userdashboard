@@ -40,7 +40,8 @@ function Register() {
     <>    
 <div class="login-page">
   <div class="form">  
-    <form class="login-form" onSubmit={handleSubmit(onSubmit)}>
+  <h1 className='text-center text-white'>User Signup</h1>
+    <form class="login-form mt-3" onSubmit={handleSubmit(onSubmit)}>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email address'
        {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}    
     />
@@ -60,7 +61,7 @@ function Register() {
       <button type='submit'>Register</button>
     </form>
   </div>   
-    <p className='text-center  fs-6  pmt'><Link to="/">Already have an account, Login here</Link></p>  
+    <p className='text-center  fs-6  pmt'><Link to="/login">Already have an account, Login here</Link></p>  
 </div>
     </>
   )
