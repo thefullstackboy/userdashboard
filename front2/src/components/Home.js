@@ -1,7 +1,6 @@
 import {Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import Navbar from './Navbar';
+import axios from 'axios';
 const apiUrl = process.env.REACT_APP_API_URL;
 
 function Home() {
@@ -24,9 +23,7 @@ const headers = {
       });
   }, []);
   return (
-    <div>  
-          <Navbar/>
-
+    <div>        
           <div className='container-fluid'>
             <div className='row'>
               <div className='col-md-3 col-lg-3 col-sm-12 col-xl-3 mt-5'>

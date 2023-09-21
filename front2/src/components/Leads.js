@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import Navbar from './Navbar'
 import {Link } from "react-router-dom";
 const apiUrl = process.env.REACT_APP_LEAD_URL;
 
@@ -24,8 +23,7 @@ const headers = {
         });
     }, []);
   return (
-    <div>
-        <Navbar/>
+    <div>       
         <div className='container-fluid'>
             <div className='row'>
               <div className='col-md-3 col-lg-2 col-sm-12 col-xl-2 mt-5'>

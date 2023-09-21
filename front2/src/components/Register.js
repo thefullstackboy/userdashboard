@@ -45,19 +45,19 @@ function Register() {
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email address'
        {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}    
     />
-      {errors.Email && <p className='text-danger'>* Please check the email id.</p>}
+      {errors.Email && <p className='text-white'>* Please check the email id.</p>}
 
       <input type="password" className="form-control"  placeholder='password'
       {...register("password",
       {required: true})}                               
     />     
-     {errors.password && <p className='text-danger'>* minimum one characters</p>}
+     {errors.password && <p className='text-white'>* minimum one characters</p>}
 
          <input type="password" className="form-control"  placeholder='confirm password'
      {...register("confirmPassword",
      {required: true})} 
     />
-     {errors.confirmPassword && <p className='text-danger'>* minimum one characters</p>}  
+     {errors.confirmPassword && <p className='text-white'>* minimum one characters</p>}  
       <button type='submit'>Register</button>
     </form>
   </div>   
