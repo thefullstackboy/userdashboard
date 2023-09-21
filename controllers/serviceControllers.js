@@ -92,7 +92,7 @@ const loginForm = async(req, res, next) => {
     if (user && (await bcrypt.compare(password, user.password))) {
       // Create token
       const token = jwt.sign(
-        { user_id: user._id, email },
+        { user_id: user._id},
         process.env.TOKEN_KEY,
         {
           expiresIn: "1h",
