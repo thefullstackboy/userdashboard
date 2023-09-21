@@ -46,13 +46,13 @@ function ResetPassword() {
       {...register("password",
       {required: true})}                               
     />     
-     {errors.password && <p className='text-danger'>* minimum one characters</p>}
+     {errors.password && <p className='text-white'>* minimum one characters</p>}
 
          <input type="password" className="form-control"  placeholder='confirm password'
      {...register("confirmPassword",
      {required: true})} 
     />
-     {errors.confirmPassword && <p className='text-danger'>* minimum one characters</p>}  
+     {errors.confirmPassword && <p className='text-white'>* minimum one characters</p>}  
       <button type="submit">Reset Password</button>
     </form>
   </div>   
