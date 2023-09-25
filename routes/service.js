@@ -8,7 +8,7 @@ router.get("/sales",verifyToken,serviceController.salesList);
 router.post("/register",validation.regValidation,serviceController.registerForm);
 router.post("/login",validation.loginValidation,serviceController.loginForm);
 router.post('/forgotpassword',validation.forgotPasswordValidation,serviceController.forgotPassword);
-router.post("/reset-password/:id/:token",serviceController.restPassword)
+router.post("/reset-password/:id/:token",validation.resetPasswordValidation,serviceController.restPassword)
 router.put("/:productId", validation.priceValidation,serviceController.price_update)
 router.get("/",verifyToken,serviceController.serviceList);
 
